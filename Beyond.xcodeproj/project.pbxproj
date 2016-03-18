@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3480172CBBD82BDF5BE05B1 /* Pods_Beyond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AD6C83845A2FBE06F15456 /* Pods_Beyond.framework */; };
 		CC1E23FA1C9C3E990080B07F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E23F91C9C3E990080B07F /* AppDelegate.swift */; };
 		CC1E23FC1C9C3E990080B07F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E23FB1C9C3E990080B07F /* ViewController.swift */; };
 		CC1E23FF1C9C3E990080B07F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E23FD1C9C3E990080B07F /* Main.storyboard */; };
@@ -17,8 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E323DDF8075C90EB4ED76E1 /* Pods-Beyond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beyond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beyond/Pods-Beyond.debug.xcconfig"; sourceTree = "<group>"; };
-		57AD6C83845A2FBE06F15456 /* Pods_Beyond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beyond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1E23F61C9C3E990080B07F /* Beyond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beyond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1E23F91C9C3E990080B07F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1E23FB1C9C3E990080B07F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +24,6 @@
 		CC1E24031C9C3E990080B07F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC1E24061C9C3E990080B07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC1E24081C9C3E990080B07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E791149306211415756B30E0 /* Pods-Beyond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beyond.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beyond/Pods-Beyond.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,37 +31,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3480172CBBD82BDF5BE05B1 /* Pods_Beyond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		60D82040372699EED8DC1ED3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				57AD6C83845A2FBE06F15456 /* Pods_Beyond.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7E8FF2C92C8C73830EE7B1F3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2E323DDF8075C90EB4ED76E1 /* Pods-Beyond.debug.xcconfig */,
-				E791149306211415756B30E0 /* Pods-Beyond.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CC1E23ED1C9C3E990080B07F = {
 			isa = PBXGroup;
 			children = (
 				CC1E23F81C9C3E990080B07F /* Beyond */,
 				CC1E23F71C9C3E990080B07F /* Products */,
-				7E8FF2C92C8C73830EE7B1F3 /* Pods */,
-				60D82040372699EED8DC1ED3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,12 +74,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC1E240B1C9C3E990080B07F /* Build configuration list for PBXNativeTarget "Beyond" */;
 			buildPhases = (
-				6A74374F391E807B54D1A0A9 /* Check Pods Manifest.lock */,
 				CC1E23F21C9C3E990080B07F /* Sources */,
 				CC1E23F31C9C3E990080B07F /* Frameworks */,
 				CC1E23F41C9C3E990080B07F /* Resources */,
-				651DADE699670EC249D56019 /* Embed Pods Frameworks */,
-				27CB350DACD2483CBB46325C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,54 +132,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		27CB350DACD2483CBB46325C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beyond/Pods-Beyond-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		651DADE699670EC249D56019 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beyond/Pods-Beyond-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A74374F391E807B54D1A0A9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC1E23F21C9C3E990080B07F /* Sources */ = {
@@ -365,7 +290,6 @@
 				CC1E240D1C9C3E990080B07F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
