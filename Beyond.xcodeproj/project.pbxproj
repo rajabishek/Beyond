@@ -326,7 +326,6 @@
 		};
 		CC1E240C1C9C3E990080B07F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E323DDF8075C90EB4ED76E1 /* Pods-Beyond.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Beyond/Info.plist;
@@ -338,7 +337,6 @@
 		};
 		CC1E240D1C9C3E990080B07F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E791149306211415756B30E0 /* Pods-Beyond.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Beyond/Info.plist;
