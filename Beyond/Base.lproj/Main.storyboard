@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Note View Controller-->
         <scene sceneID="63Y-dV-uTN">
             <objects>
-                <viewController id="f4R-hl-OUj" sceneMemberID="viewController">
+                <viewController id="f4R-hl-OUj" customClass="NewNoteViewController" customModule="Beyond" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRW-gh-NYo"/>
                         <viewControllerLayoutGuide type="bottom" id="BiP-pR-C0M"/>
