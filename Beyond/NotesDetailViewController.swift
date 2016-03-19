@@ -38,7 +38,8 @@ class NotesDetailViewController: UIViewController {
     @IBAction func deleteButtonWasPressed(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete this note ?", preferredStyle: .Alert)
         let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Destructive) { (action) -> Void in
-            //note.remove()
+            self.note.remove()
+            self.performSegueWithIdentifier("deleteNoteUnwindSegue", sender: self)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         alert.addAction(deleteAction)

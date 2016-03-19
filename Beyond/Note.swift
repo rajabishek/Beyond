@@ -69,4 +69,20 @@ class Note:NSManagedObject {
         
         return false
     }
+    
+    func remove() -> Bool {
+        
+        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            let managedObjectContext = appDelegate.managedObjectContext
+            managedObjectContext.deleteObject(self)
+            do {
+                try managedObjectContext.save()
+                return true
+            } catch {
+                print(error)
+            }
+        }
+        
+        return false
+    }
 }
