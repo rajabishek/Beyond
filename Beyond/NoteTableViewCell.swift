@@ -10,6 +10,12 @@ import UIKit
 
 class NoteTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var noteImageView: UIImageView!
+    
+    @IBOutlet weak var titleTextLabel: UILabel!
+    
+    @IBOutlet weak var notesTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
