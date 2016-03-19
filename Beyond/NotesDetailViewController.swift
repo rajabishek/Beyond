@@ -24,6 +24,12 @@ class NotesDetailViewController: UIViewController {
         contentTextView.text = note.content
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        note.title = titleTextField.text!
+        note.content = contentTextView.text!
+        note.save()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

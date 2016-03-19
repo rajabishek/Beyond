@@ -53,4 +53,20 @@ class Note:NSManagedObject {
         
         return nil
     }
+    
+    func save() -> Bool{
+        
+        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            let managedObjectContext = appDelegate.managedObjectContext
+            
+            do {
+                try managedObjectContext.save()
+                return true
+            } catch {
+                    print(error)
+            }
+        }
+        
+        return false
+    }
 }
