@@ -15,6 +15,7 @@
 		CC1E24071C9C3E990080B07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E24051C9C3E990080B07F /* LaunchScreen.storyboard */; };
 		CC4BECA01C9D62A1007D045A /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BEC9F1C9D62A1007D045A /* NotesTableViewController.swift */; };
 		CC4BECA31C9D6337007D045A /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BECA21C9D6337007D045A /* NoteTableViewCell.swift */; };
+		CC4BECA51C9D6CCA007D045A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BECA41C9D6CCA007D045A /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CC1E24081C9C3E990080B07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4BEC9F1C9D62A1007D045A /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		CC4BECA21C9D6337007D045A /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		CC4BECA41C9D6CCA007D045A /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				CC1E24001C9C3E990080B07F /* Beyond.xcdatamodeld */,
+				CC4BECA41C9D6CCA007D045A /* Note.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4BECA51C9D6CCA007D045A /* Note.swift in Sources */,
 				CC1E24021C9C3E990080B07F /* Beyond.xcdatamodeld in Sources */,
 				CC1E23FA1C9C3E990080B07F /* AppDelegate.swift in Sources */,
 				CC4BECA01C9D62A1007D045A /* NotesTableViewController.swift in Sources */,
