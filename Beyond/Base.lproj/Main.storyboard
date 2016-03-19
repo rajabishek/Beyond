@@ -203,7 +203,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Khz-4A-Ehf">
-                        <barButtonItem key="rightBarButtonItem" image="share" id="Yaa-V2-NmA"/>
+                        <barButtonItem key="rightBarButtonItem" image="delete" id="H5U-Ns-QE1"/>
                     </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="m60-ma-12s" id="Czm-pK-GT4"/>
@@ -253,8 +253,8 @@
     </scenes>
     <resources>
         <image name="cross" width="25" height="25"/>
+        <image name="delete" width="25" height="25"/>
         <image name="menu" width="25" height="25"/>
         <image name="plus" width="25" height="25"/>
-        <image name="share" width="25" height="25"/>
     </resources>
 </document>
