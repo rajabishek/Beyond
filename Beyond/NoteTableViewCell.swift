@@ -14,7 +14,7 @@ class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleTextLabel: UILabel!
     
-    @IBOutlet weak var notesTextLabel: UILabel!
+    @IBOutlet weak var contentTextLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
