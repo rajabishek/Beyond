@@ -14,6 +14,7 @@
 		CC1E24041C9C3E990080B07F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC1E24031C9C3E990080B07F /* Assets.xcassets */; };
 		CC1E24071C9C3E990080B07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E24051C9C3E990080B07F /* LaunchScreen.storyboard */; };
 		CC4BECA01C9D62A1007D045A /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BEC9F1C9D62A1007D045A /* NotesTableViewController.swift */; };
+		CC4BECA31C9D6337007D045A /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BECA21C9D6337007D045A /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CC1E24061C9C3E990080B07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC1E24081C9C3E990080B07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4BEC9F1C9D62A1007D045A /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		CC4BECA21C9D6337007D045A /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		CC1E23F81C9C3E990080B07F /* Beyond */ = {
 			isa = PBXGroup;
 			children = (
+				CC4BECA11C9D6314007D045A /* Cells */,
 				CC4BEC9B1C9D626B007D045A /* Supporting Files */,
 				CC4BEC9D1C9D627D007D045A /* View */,
 				CC4BEC9E1C9D6282007D045A /* Controller */,
@@ -121,6 +124,14 @@
 				CC4BEC9F1C9D62A1007D045A /* NotesTableViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CC4BECA11C9D6314007D045A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC4BECA21C9D6337007D045A /* NoteTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +259,7 @@
 				CC1E24021C9C3E990080B07F /* Beyond.xcdatamodeld in Sources */,
 				CC1E23FA1C9C3E990080B07F /* AppDelegate.swift in Sources */,
 				CC4BECA01C9D62A1007D045A /* NotesTableViewController.swift in Sources */,
+				CC4BECA31C9D6337007D045A /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
