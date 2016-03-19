@@ -63,7 +63,7 @@ class Note:NSManagedObject {
                 try managedObjectContext.save()
                 return true
             } catch {
-                    print(error)
+                print(error)
             }
         }
         
