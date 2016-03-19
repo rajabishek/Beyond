@@ -23,7 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Jwg-Uc-7hk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Start Writing..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-mf-DUR">
@@ -46,9 +46,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N5P-Ye-kcP">
-                        <barButtonItem key="leftBarButtonItem" image="cross" id="d8q-QA-06U"/>
+                        <barButtonItem key="leftBarButtonItem" image="cross" id="d8q-QA-06U">
+                            <connections>
+                                <action selector="closeButtonWasPressed:" destination="f4R-hl-OUj" id="zqo-ug-tEs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="gCf-lh-STI"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="WhL-mf-DUR" id="jTs-AE-LUD"/>
+                        <outlet property="titleTextField" destination="6Ry-hr-eTr" id="uai-gC-TQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGw-Sg-JuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +145,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CFd-vE-4Wb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Start writing..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m60-ma-12s">
