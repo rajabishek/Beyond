@@ -38,19 +38,19 @@ class Note:NSManagedObject {
         return false
     }
     
-//    class func getAllNotes() -> [Note]? {
-//        
-//        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-//            let managedObjectContext = appDelegate.managedObjectContext
-//            let fetchRequest = NSFetchRequest(entityName: entityName)
-//        
-//            do {
-//                return try managedObjectContext.executeFetchRequest(fetchRequest) as? [Note]
-//            } catch {
-//                print(error)
-//            }
-//        }
-//        
-//        return nil
-//    }
+    class func getAllNotes() -> [Note]? {
+        
+        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            let managedObjectContext = appDelegate.managedObjectContext
+            let fetchRequest = NSFetchRequest(entityName: entityName)
+        
+            do {
+                return try managedObjectContext.executeFetchRequest(fetchRequest) as? [Note]
+            } catch {
+                print(error)
+            }
+        }
+        
+        return nil
+    }
 }
