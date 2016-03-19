@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UINavigationBar.appearance().barTintColor = UIColor(red:0.94, green:0.28, blue:0.21, alpha:1.00)
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.95, green:0.15, blue:0.07, alpha:1.00)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         
         if let barFont = UIFont(name: "Avenir-Light", size: 22.0) {
