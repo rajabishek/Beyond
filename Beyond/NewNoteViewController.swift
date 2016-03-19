@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewNoteViewController: UIViewController, UITextViewDelegate {
+class NewNoteViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -28,20 +28,6 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func textViewDidBeginEditing(textView: UITextView) {
-        if textView.textColor == UIColor.lightGrayColor() {
-            textView.text = nil
-            textView.textColor = UIColor.blackColor()
-        }
-    }
-    
-    func textViewDidEndEditing(textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = contentViewPlaceHolderText
-            textView.textColor = UIColor.lightGrayColor()
-        }
     }
     
     @IBAction func closeButtonWasPressed(sender: UIBarButtonItem) {
@@ -71,5 +57,21 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension NewNoteViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.textColor == UIColor.lightGrayColor() {
+            textView.text = nil
+            textView.textColor = UIColor.blackColor()
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = contentViewPlaceHolderText
+            textView.textColor = UIColor.lightGrayColor()
+        }
+    }
 }
