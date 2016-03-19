@@ -48,10 +48,10 @@ class NotesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteTableViewCell", forIndexPath: indexPath) as! NoteTableViewCell
-
+        
         // Configure the cell...
-        cell.titleTextLabel.text = notes[indexPath.row].title
-        cell.contentTextLabel.text = notes[indexPath.row].content
+        cell.titleTextLabel.text = self.notes[indexPath.row].title
+        cell.contentTextLabel.text = self.notes[indexPath.row].content
         cell.backgroundColor = UIColor.clearColor()
         
         return cell
