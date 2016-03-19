@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewNoteViewController: UIViewController {
 
@@ -28,6 +29,10 @@ class NewNoteViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        Note.createNoteAndSave(titleTextField.text!, content: contentTextView.text!)
     }
     
     @IBAction func closeButtonWasPressed(sender: UIBarButtonItem) {

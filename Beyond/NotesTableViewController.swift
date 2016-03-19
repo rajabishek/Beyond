@@ -10,11 +10,17 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
 
+    var notes = [Note]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Beyond"
         tableView.tableFooterView = UIView()
+        
+        if let notes = Note.getAllNotes() {
+            self.notes = notes
+        }
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
@@ -32,16 +38,17 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return notes.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteTableViewCell", forIndexPath: indexPath) as! NoteTableViewCell
 
         // Configure the cell...
-        cell.titleTextLabel.text = "Microsoft in search for google as its customer"
-        cell.contentTextLabel.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        cell.titleTextLabel.text = notes[indexPath.row].title
+        cell.contentTextLabel.text = notes[indexPath.row].description
         cell.backgroundColor = UIColor.clearColor()
+        
         return cell
     }
 
