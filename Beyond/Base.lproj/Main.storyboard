@@ -110,7 +110,7 @@
                                 <connections>
                                     <outlet property="contentTextLabel" destination="aPj-hB-eOT" id="48B-uh-SEF"/>
                                     <outlet property="titleTextLabel" destination="QPy-mh-xWB" id="sxX-2h-RRe"/>
-                                    <segue destination="aSZ-Xx-iYR" kind="show" id="zlw-wM-vAS"/>
+                                    <segue destination="aSZ-Xx-iYR" kind="show" identifier="presentDetailedNoteView" id="zlw-wM-vAS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

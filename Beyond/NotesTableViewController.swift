@@ -56,6 +56,17 @@ class NotesTableViewController: UITableViewController {
         
         return cell
     }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "presentDetailedNoteView" {
+            if let destinationViewController = segue.destinationViewController as? NotesDetailViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    destinationViewController.note = notes[indexPath.row]
+                }
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,15 +102,4 @@ class NotesTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
