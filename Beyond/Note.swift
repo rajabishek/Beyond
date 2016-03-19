@@ -7,15 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
-class Note {
+class Note:NSManagedObject {
     
-    var title: String
-
-    var content: String
-    
-    init(title: String, content: String) {
-        self.title = title
-        self.content = content
-    }
+    @NSManaged var title: String
+    @NSManaged var content: String
 }
