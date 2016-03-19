@@ -17,9 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="efx-6v-Rbc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Title" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Dv-3I-kk1">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HJN-Sd-5Pe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Start writing..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kFr-hg-NiW">
+                                <rect key="frame" x="20" y="110" width="560" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Dv-3I-kk1" firstAttribute="leading" secondItem="efx-6v-Rbc" secondAttribute="leadingMargin" id="C8R-QY-gR2"/>
+                            <constraint firstItem="BiP-pR-C0M" firstAttribute="top" secondItem="kFr-hg-NiW" secondAttribute="bottom" constant="20" id="GPb-HS-AmN"/>
+                            <constraint firstItem="6Dv-3I-kk1" firstAttribute="top" secondItem="WRW-gh-NYo" secondAttribute="bottom" constant="8" id="Hsj-SI-Y02"/>
+                            <constraint firstItem="kFr-hg-NiW" firstAttribute="trailing" secondItem="efx-6v-Rbc" secondAttribute="trailingMargin" id="PW4-Dy-bmo"/>
+                            <constraint firstItem="kFr-hg-NiW" firstAttribute="leading" secondItem="efx-6v-Rbc" secondAttribute="leadingMargin" id="eKv-qV-e0G"/>
+                            <constraint firstItem="kFr-hg-NiW" firstAttribute="top" secondItem="6Dv-3I-kk1" secondAttribute="bottom" constant="8" id="efT-dU-EjT"/>
+                            <constraint firstItem="6Dv-3I-kk1" firstAttribute="trailing" secondItem="efx-6v-Rbc" secondAttribute="trailingMargin" id="lhy-gH-u8W"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="N5P-Ye-kcP"/>
+                    <navigationItem key="navigationItem" id="N5P-Ye-kcP">
+                        <barButtonItem key="leftBarButtonItem" image="cross" id="d8q-QA-06U"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gCf-lh-STI"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGw-Sg-JuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cross" width="25" height="25"/>
         <image name="menu" width="25" height="25"/>
         <image name="plus" width="25" height="25"/>
     </resources>
