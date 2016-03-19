@@ -6,6 +6,25 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="63Y-dV-uTN">
+            <objects>
+                <viewController id="f4R-hl-OUj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WRW-gh-NYo"/>
+                        <viewControllerLayoutGuide type="bottom" id="BiP-pR-C0M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="efx-6v-Rbc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N5P-Ye-kcP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGw-Sg-JuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="-406"/>
+        </scene>
         <!--Notes Table View Controller-->
         <scene sceneID="S1d-Te-Mum">
             <objects>
@@ -23,16 +42,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aUX-nE-RvZ">
-                                            <rect key="frame" x="8" y="8" width="551" height="84"/>
+                                            <rect key="frame" x="18" y="8" width="541" height="84"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPy-mh-xWB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="551" height="23.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="541" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Content...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPj-hB-eOT">
-                                                    <rect key="frame" x="0.0" y="23.5" width="551" height="60.5"/>
+                                                    <rect key="frame" x="0.0" y="23.5" width="541" height="60.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -43,7 +62,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="aUX-nE-RvZ" secondAttribute="trailing" id="27A-Xa-diD"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="aUX-nE-RvZ" secondAttribute="bottom" id="91q-Tm-OIv"/>
-                                        <constraint firstItem="aUX-nE-RvZ" firstAttribute="leading" secondItem="Uaa-wV-ok9" secondAttribute="leadingMargin" id="Ka3-7G-9aE"/>
+                                        <constraint firstItem="aUX-nE-RvZ" firstAttribute="leading" secondItem="Uaa-wV-ok9" secondAttribute="leadingMargin" constant="10" id="Ka3-7G-9aE"/>
                                         <constraint firstItem="aUX-nE-RvZ" firstAttribute="top" secondItem="Uaa-wV-ok9" secondAttribute="topMargin" id="ZOR-m1-hKr"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -61,17 +80,21 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fYz-Rq-zMU">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="3q3-Bc-yff"/>
-                        <barButtonItem key="rightBarButtonItem" image="plus" id="STl-BF-vVW"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="STl-BF-vVW">
+                            <connections>
+                                <segue destination="w5d-BH-fZS" kind="presentation" id="bhq-DA-Igv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioe-lA-o5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1224" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes Detail View Controller-->
         <scene sceneID="uEd-T1-fZr">
             <objects>
-                <viewController id="aSZ-Xx-iYR" sceneMemberID="viewController">
+                <viewController id="aSZ-Xx-iYR" customClass="NotesDetailViewController" customModule="Beyond" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JOi-4V-miz"/>
                         <viewControllerLayoutGuide type="bottom" id="L9K-7x-sG4"/>
@@ -107,10 +130,14 @@
                             <constraint firstItem="lad-JN-f5m" firstAttribute="top" secondItem="JOi-4V-miz" secondAttribute="bottom" constant="8" id="jKn-Mr-Mi4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="V1d-Ts-iN3" id="n0G-P4-cCZ"/>
+                        <outlet property="titleTextView" destination="lad-JN-f5m" id="fDU-bt-9Rv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezg-HN-uAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885" y="250"/>
+            <point key="canvasLocation" x="2038" y="250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iew-uQ-N2u">
@@ -129,6 +156,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS4-vc-xsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="412" y="250"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Wy-oB-ZkD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w5d-BH-fZS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8cG-R3-FK0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f4R-hl-OUj" kind="relationship" relationship="rootViewController" id="KZP-l2-vYw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5r-xU-tQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226" y="-406"/>
         </scene>
     </scenes>
     <resources>
