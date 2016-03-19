@@ -15,7 +15,9 @@ class NotesTableViewController: UITableViewController {
         
         title = "Beyond"
         tableView.tableFooterView = UIView()
-        //tableView.backgroundColor = UIColor(red:0.89, green:0.95, blue:1.00, alpha:1.00)
+        
+        // Remove the title of the back button
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     }
     
     override func didReceiveMemoryWarning() {

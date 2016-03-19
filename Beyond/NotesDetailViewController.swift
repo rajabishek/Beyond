@@ -9,17 +9,18 @@
 import UIKit
 
 class NotesDetailViewController: UIViewController {
-
-    @IBOutlet weak var titleTextView: UITextView!
+    
+    
+    @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var contentTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Keep Writing"
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

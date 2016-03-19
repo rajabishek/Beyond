@@ -12,7 +12,7 @@ class NewNoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Start Writing"
         // Do any additional setup after loading the view.
     }
 
