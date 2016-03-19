@@ -18,12 +18,17 @@ class NotesTableViewController: UITableViewController {
         title = "Beyond"
         tableView.tableFooterView = UIView()
         
-        if let notes = Note.getAllNotes() {
-            self.notes = notes
-        }
-        
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let notes = Note.getAllNotes() {
+            self.notes = notes
+            tableView.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,7 +51,7 @@ class NotesTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.titleTextLabel.text = notes[indexPath.row].title
-        cell.contentTextLabel.text = notes[indexPath.row].description
+        cell.contentTextLabel.text = notes[indexPath.row].content
         cell.backgroundColor = UIColor.clearColor()
         
         return cell

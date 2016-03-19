@@ -31,8 +31,9 @@ class NewNoteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        Note.createNoteAndSave(titleTextField.text!, content: contentTextView.text!)
+    @IBAction func saveButtonWasPressed(sender: UIBarButtonItem) {
+        Note.createNoteAndSave(self.titleTextField.text!, content: self.contentTextView.text!)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func closeButtonWasPressed(sender: UIBarButtonItem) {
@@ -41,11 +42,13 @@ class NewNoteViewController: UIViewController {
             self.dismissViewControllerAnimated(true, completion: nil)
         } else {
             let alertController = UIAlertController(title: "Caution", message: "You have something written. Sure don't wanna save ?", preferredStyle: .Alert)
-            
-            let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.Default, handler: nil)
-            let closeAction = UIAlertAction(title: "Never Mind", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
+            let saveAction = UIAlertAction(title: "Save", style: .Default) { action in
+                Note.createNoteAndSave(self.titleTextField.text!, content: self.contentTextView.text!)
                 self.dismissViewControllerAnimated(true, completion: nil)
-            })
+            }
+            let closeAction = UIAlertAction(title: "Never Mind", style: UIAlertActionStyle.Destructive) { action in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
             
             alertController.addAction(saveAction)
             alertController.addAction(closeAction)

@@ -51,7 +51,11 @@
                                 <action selector="closeButtonWasPressed:" destination="f4R-hl-OUj" id="zqo-ug-tEs"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="gCf-lh-STI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gCf-lh-STI">
+                            <connections>
+                                <action selector="saveButtonWasPressed:" destination="f4R-hl-OUj" id="M9Z-GI-jVb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="WhL-mf-DUR" id="jTs-AE-LUD"/>
