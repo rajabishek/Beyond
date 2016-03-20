@@ -23,6 +23,8 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var registrationContainer: UIStackView!
     
+    let manager = AuthManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         errorMessage.text = ""
@@ -61,6 +63,9 @@ class RegisterViewController: UIViewController {
                 presentInvalidRegistrationAlert("The passwords do not match")
             } else {
                 errorMessage.text = ""
+                manager.signupWithName("Raj Abishek", email: email, password: password, confirm: confirm) { error, token in
+                    print(token)
+                }
                 print("Send the user data to the server.")
             }
         }
