@@ -69,6 +69,10 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
     }
+    
+    @IBAction func deleteNoteUnwindSegue(segue: UIStoryboardSegue) {
+        print("I have come here now...")
+    }
 
     /*
     // Override to support conditional editing of the table view.
