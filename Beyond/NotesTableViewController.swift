@@ -92,6 +92,7 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
                 }
             case .Delete:
                 if let _indexPath = indexPath {
+                    print(_indexPath.row)
                     tableView.deleteRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
                 }
             case .Update:
@@ -102,6 +103,10 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
                 tableView.reloadData()
         }
         notes = controller.fetchedObjects as! [Note]
+        if searchController.active {
+            searchResults = notes
+            updateSearchResultsForSearchController(searchController)
+        }
     }
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
