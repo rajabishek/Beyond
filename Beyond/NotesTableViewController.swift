@@ -9,24 +9,56 @@
 import UIKit
 import CoreData
 
-class NotesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+class NotesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
 
     var notes = [Note]()
+    
+    var searchResults = [Note]()
     
     @IBOutlet weak var tableView: UITableView!
     
     var fetchResultController:NSFetchedResultsController!
+    
+    var searchController:UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupFetchResultsController()
         
+        setupSearchController()
+        
         title = "Beyond"
         tableView.tableFooterView = UIView()
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+    }
+    
+    func filterContentForSearchText(searchText: String) {
+        searchResults = notes.filter({ note in
+        note.title.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch) != nil
+        })
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContentForSearchText(searchText)
+            tableView.reloadData()
+        }
+    }
+    
+    func setupSearchController() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.placeholder = "Search notes..."
+        searchController.searchBar.tintColor = UIColor.whiteColor()
+        searchController.searchBar.barTintColor = UIColor(red: 30.0/255.0, green:
+        30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
     }
     
     func setupFetchResultsController() {
@@ -56,15 +88,15 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         switch type {
             case .Insert:
                 if let _newIndexPath = newIndexPath {
-                tableView.insertRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
+                    tableView.insertRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
                 }
             case .Delete:
                 if let _indexPath = indexPath {
-                tableView.deleteRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
+                    tableView.deleteRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
                 }
             case .Update:
                 if let _indexPath = indexPath {
-                tableView.reloadRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
+                    tableView.reloadRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
                 }
             default:
                 tableView.reloadData()
@@ -75,15 +107,6 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.endUpdates()
     }
-    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        if let notes = Note.getAllNotes() {
-//            self.notes = notes
-//            self.tableView.reloadData()
-//        }
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,15 +120,29 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        if searchController.active && searchController.searchBar.text != "" {
+            return searchResults.count
+        } else {
+            return notes.count
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if searchController.active && searchController.searchBar.text != "" {
+            return false
+        } else {
+            return true
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteTableViewCell", forIndexPath: indexPath) as! NoteTableViewCell
         
+        let note = (searchController.active && searchController.searchBar.text != "") ? searchResults[indexPath.row] : notes[indexPath.row]
+        
         // Configure the cell...
-        cell.titleTextLabel.text = self.notes[indexPath.row].title
-        cell.contentTextLabel.text = self.notes[indexPath.row].content
+        cell.titleTextLabel.text = note.title
+        cell.contentTextLabel.text = note.content
         cell.backgroundColor = UIColor.clearColor()
         
         return cell
@@ -116,7 +153,7 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "presentDetailedNoteView" {
             if let destinationViewController = segue.destinationViewController as? NotesDetailViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
-                    destinationViewController.note = notes[indexPath.row]
+                    destinationViewController.note = (searchController.active && searchController.searchBar.text != "") ? searchResults[indexPath.row] : notes[indexPath.row]
                 }
             }
         }
