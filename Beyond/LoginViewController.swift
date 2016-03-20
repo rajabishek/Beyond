@@ -29,6 +29,12 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func presentInvalidRegistrationAlert(message: String) {
+        errorMessageTextLabel.text = message
+        loginButton.animation = "shake"
+        loginButton.animate()
+    }
 
     @IBAction func loginButtonWasPressed(sender: AnyObject) {
         
