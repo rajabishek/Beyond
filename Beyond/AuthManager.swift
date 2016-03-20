@@ -12,13 +12,13 @@ import SwiftyJSON
 
 class AuthManager {
     
+    static let defaults = NSUserDefaults.standardUserDefaults()
+    
     class func getToken() -> String? {
-        let defaults = NSUserDefaults.standardUserDefaults()
         return defaults.objectForKey("token") as? String
     }
     
     class func setToken(token: String) {
-        let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(token, forKey: "token")
     }
     
