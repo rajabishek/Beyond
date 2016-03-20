@@ -21,6 +21,7 @@
 		CCB87B241C9E886B00A66420 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B231C9E886B00A66420 /* AboutViewController.swift */; };
 		CCB87B261C9EB89300A66420 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B251C9EB89300A66420 /* LoginViewController.swift */; };
 		CCB87B281C9EB8B800A66420 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B271C9EB8B800A66420 /* RegisterViewController.swift */; };
+		CCB87B2B1C9EDC1B00A66420 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B2A1C9EDC1B00A66420 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CCB87B231C9E886B00A66420 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CCB87B251C9EB89300A66420 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCB87B271C9EB8B800A66420 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CCB87B2A1C9EDC1B00A66420 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		CC1E23F81C9C3E990080B07F /* Beyond */ = {
 			isa = PBXGroup;
 			children = (
+				CCB87B291C9EDBEE00A66420 /* Networking */,
 				CC4BECA11C9D6314007D045A /* Cells */,
 				CC4BEC9B1C9D626B007D045A /* Supporting Files */,
 				CC4BEC9D1C9D627D007D045A /* View */,
@@ -150,6 +153,14 @@
 				CC4BECA21C9D6337007D045A /* NoteTableViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		CCB87B291C9EDBEE00A66420 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CCB87B2A1C9EDC1B00A66420 /* AuthManager.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				CC1E24021C9C3E990080B07F /* Beyond.xcdatamodeld in Sources */,
 				CC1E23FA1C9C3E990080B07F /* AppDelegate.swift in Sources */,
 				CC4BECA01C9D62A1007D045A /* NotesTableViewController.swift in Sources */,
+				CCB87B2B1C9EDC1B00A66420 /* AuthManager.swift in Sources */,
 				CCB87B241C9E886B00A66420 /* AboutViewController.swift in Sources */,
 				CC4BECA31C9D6337007D045A /* NoteTableViewCell.swift in Sources */,
 			);
