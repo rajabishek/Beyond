@@ -25,12 +25,12 @@ class AuthManager {
     let baseUrl = "http://begin.dev/api/v1"
     
     func loginWithEmail(email: String, password: String, callback: (errorMessage: String?, token: String?) -> Void) {
-        Alamofire.request(.POST, "\(baseUrl)/login", parameters: ["email": email, "password": password])
-            .responseData { response in
+        Alamofire.request(.POST, "\(baseUrl)/login", parameters: ["email": email, "password": password]).responseJSON { response in
                 switch response.result {
                 case .Success:
                     if let value = response.result.value {
                         let json = JSON(value)
+                        print("\(json)")
                         if let success = json["success"].bool {
                             if success {
                                 if let token = json["data"]["token"].string {
