@@ -410,7 +410,7 @@
                     </view>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="vsI-PA-WZZ" id="1aa-fx-cru"/>
-                        <outlet property="emailAddressTextField" destination="La4-LY-bzn" id="x6w-66-Rsa"/>
+                        <outlet property="emailTextField" destination="La4-LY-bzn" id="QR7-rf-DuR"/>
                         <outlet property="errorMessageTextLabel" destination="gKg-p0-P09" id="hZe-zG-1Yz"/>
                         <outlet property="passwordTextField" destination="OT7-uM-e3i" id="UwV-WN-pbF"/>
                         <outlet property="registerButton" destination="bHD-bx-hk5" id="VVo-8U-wAJ"/>

@@ -11,7 +11,7 @@ import Spring
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -50,7 +50,7 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonWasPressed(sender: UIButton) {
         
-        if let email = emailAddressTextField.text, let password = passwordTextField.text, let confirm = confirmPasswordTextField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmPasswordTextField.text {
             
             if email == "" || password == "" || confirm == "" {
                 presentInvalidRegistrationAlert("Please fill in all the fields")
