@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: SpringButton!
     
+    let manager = AuthManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         errorMessageTextLabel.text = ""
@@ -30,7 +32,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func presentInvalidRegistrationAlert(message: String) {
+    func presentInvalidLoginAlert(message: String) {
         errorMessageTextLabel.text = message
         loginButton.animation = "shake"
         loginButton.animate()
@@ -46,6 +48,24 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonWasPressed(sender: AnyObject) {
         
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            if email == "" || password == "" {
+                presentInvalidLoginAlert("Please fill in all the fields")
+            } else if !isValidEmail(email) {
+                presentInvalidLoginAlert("Email address seems to be invalid")
+            } else {
+                errorMessageTextLabel.text = ""
+                manager.loginWithEmail(email, password: password) { error, token in
+                    if error != nil {
+                        self.presentInvalidLoginAlert(error!)
+                    } else {
+                        AuthManager.setToken(token!)
+                        self.performSegueWithIdentifier("presentHomeScreen", sender: self)
+                    }
+                }
+            }
+        }
     }
     
     /*
