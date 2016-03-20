@@ -414,6 +414,7 @@
                         <outlet property="errorMessage" destination="gKg-p0-P09" id="IOy-GN-3eg"/>
                         <outlet property="passwordTextField" destination="OT7-uM-e3i" id="UwV-WN-pbF"/>
                         <outlet property="registerButton" destination="bHD-bx-hk5" id="VVo-8U-wAJ"/>
+                        <segue destination="rVL-ew-Bbg" kind="show" identifier="presentHomeScreen" id="Zp4-ar-VO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ge1-cv-4oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -590,4 +591,7 @@
         <image name="menu" width="25" height="25"/>
         <image name="plus" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zp4-ar-VO6"/>
+    </inferredMetricsTieBreakers>
 </document>

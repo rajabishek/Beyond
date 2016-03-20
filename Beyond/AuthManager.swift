@@ -12,13 +12,14 @@ import SwiftyJSON
 
 class AuthManager {
     
-    static var token: String? {
-        get {
-            return AuthManager.token
-        }
-        set {
-            AuthManager.token = newValue
-        }
+    class func getToken() -> String? {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.objectForKey("token") as? String
+    }
+    
+    class func setToken(token: String) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(token, forKey: "token")
     }
     
     let baseUrl = "http://begin.dev/api/v1"
@@ -39,7 +40,6 @@ class AuthManager {
                     case .Success:
                         if let value = response.result.value {
                             let json = JSON(value)
-                            print("\(json)")
                             if let success = json["success"].bool {
                                 if success {
                                     if let token = json["data"]["token"].string {

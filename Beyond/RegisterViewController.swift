@@ -67,11 +67,10 @@ class RegisterViewController: UIViewController {
                     if error != nil {
                         self.presentInvalidRegistrationAlert(error!)
                     } else {
-                        AuthManager.token = token!
+                        AuthManager.setToken(token!)
                         self.performSegueWithIdentifier("presentHomeScreen", sender: self)
                     }
                 }
-                print("Send the user data to the server.")
             }
         }
     }

@@ -28,6 +28,10 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         
         setupSearchController()
         
+        if let token = AuthManager.getToken() {
+            print(token)
+        }
+        
         title = "Beyond"
         tableView.tableFooterView = UIView()
         
