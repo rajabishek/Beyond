@@ -203,7 +203,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Khz-4A-Ehf">
-                        <barButtonItem key="rightBarButtonItem" image="delete" id="H5U-Ns-QE1"/>
+                        <barButtonItem key="rightBarButtonItem" image="delete" id="H5U-Ns-QE1">
+                            <connections>
+                                <action selector="deleteButtonWasPressed:" destination="aSZ-Xx-iYR" id="1QQ-Qy-DqA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="dn1-7c-4ri" id="8b0-Qr-9Bj"/>
