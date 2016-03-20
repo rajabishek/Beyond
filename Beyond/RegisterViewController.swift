@@ -11,6 +11,8 @@ import Spring
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -50,9 +52,9 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonWasPressed(sender: UIButton) {
         
-        if let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmPasswordTextField.text {
+        if let username = usernameTextField.text, let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmPasswordTextField.text {
             
-            if email == "" || password == "" || confirm == "" {
+            if username == "" || email == "" || password == "" || confirm == "" {
                 presentInvalidRegistrationAlert("Please fill in all the fields")
             } else if !isValidEmail(email) {
                 presentInvalidRegistrationAlert("Email address seems to be invalid")
@@ -61,7 +63,7 @@ class RegisterViewController: UIViewController {
                 presentInvalidRegistrationAlert("The passwords do not match")
             } else {
                 errorMessageTextLabel.text = ""
-                manager.signupWithName("Raj Abishek", email: email, password: password, confirm: confirm) { error, token in
+                manager.signupWithName(username, email: email, password: password, confirm: confirm) { error, token in
                     if error != nil {
                         self.presentInvalidRegistrationAlert(error!)
                     } else {

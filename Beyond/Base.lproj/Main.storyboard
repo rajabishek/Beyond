@@ -420,6 +420,7 @@
                         <outlet property="errorMessageTextLabel" destination="gKg-p0-P09" id="hZe-zG-1Yz"/>
                         <outlet property="passwordTextField" destination="OT7-uM-e3i" id="UwV-WN-pbF"/>
                         <outlet property="registerButton" destination="bHD-bx-hk5" id="VVo-8U-wAJ"/>
+                        <outlet property="usernameTextField" destination="TDe-c9-qsb" id="GRP-AA-xdH"/>
                         <segue destination="rVL-ew-Bbg" kind="show" identifier="presentHomeScreen" id="Zp4-ar-VO6"/>
                     </connections>
                 </viewController>
@@ -621,6 +622,6 @@
         <image name="plus" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WPi-QY-dBT"/>
+        <segue reference="Zp4-ar-VO6"/>
     </inferredMetricsTieBreakers>
 </document>
