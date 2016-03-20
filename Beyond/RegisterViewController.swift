@@ -64,7 +64,12 @@ class RegisterViewController: UIViewController {
             } else {
                 errorMessage.text = ""
                 manager.signupWithName("Raj Abishek", email: email, password: password, confirm: confirm) { error, token in
-                    print(token)
+                    if error != nil {
+                        self.presentInvalidRegistrationAlert(error!)
+                    } else {
+                        AuthManager.token = token!
+                        self.performSegueWithIdentifier("presentHomeScreen", sender: self)
+                    }
                 }
                 print("Send the user data to the server.")
             }
