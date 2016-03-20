@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
-class NotesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NotesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
 
     var notes = [Note]()
     
     @IBOutlet weak var tableView: UITableView!
     
+    var fetchResultController:NSFetchedResultsController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupFetchResultsController()
         
         title = "Beyond"
         tableView.tableFooterView = UIView()
@@ -24,14 +29,61 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    func setupFetchResultsController() {
         
-        if let notes = Note.getAllNotes() {
-            self.notes = notes
-            self.tableView.reloadData()
+        let fetchRequest = NSFetchRequest(entityName: "Note")
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
+            fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+            fetchResultController.delegate = self
+            do {
+                try fetchResultController.performFetch()
+                notes = fetchResultController.fetchedObjects as! [Note]
+            } catch {
+                print(error)
+            }
         }
     }
+    
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        
+        switch type {
+            case .Insert:
+                if let _newIndexPath = newIndexPath {
+                tableView.insertRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
+                }
+            case .Delete:
+                if let _indexPath = indexPath {
+                tableView.deleteRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
+                }
+            case .Update:
+                if let _indexPath = indexPath {
+                tableView.reloadRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
+                }
+            default:
+                tableView.reloadData()
+        }
+        notes = controller.fetchedObjects as! [Note]
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.endUpdates()
+    }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        if let notes = Note.getAllNotes() {
+//            self.notes = notes
+//            self.tableView.reloadData()
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
