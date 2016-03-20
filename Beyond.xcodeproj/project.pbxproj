@@ -22,6 +22,7 @@
 		CCB87B261C9EB89300A66420 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B251C9EB89300A66420 /* LoginViewController.swift */; };
 		CCB87B281C9EB8B800A66420 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B271C9EB8B800A66420 /* RegisterViewController.swift */; };
 		CCB87B2B1C9EDC1B00A66420 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B2A1C9EDC1B00A66420 /* AuthManager.swift */; };
+		CCB87B2F1C9F0C3500A66420 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB87B2E1C9F0C3500A66420 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CCB87B251C9EB89300A66420 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCB87B271C9EB8B800A66420 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CCB87B2A1C9EDC1B00A66420 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CCB87B2E1C9F0C3500A66420 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CC4BEC9D1C9D627D007D045A /* View */,
 				CC4BEC9E1C9D6282007D045A /* Controller */,
 				CC4BEC9C1C9D6276007D045A /* Model */,
+				CCB87B2E1C9F0C3500A66420 /* Validator.swift */,
 			);
 			path = Beyond;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				CCB87B281C9EB8B800A66420 /* RegisterViewController.swift in Sources */,
 				CC4BECA51C9D6CCA007D045A /* Note.swift in Sources */,
 				CC9003A11C9D8679004BEE48 /* NotesDetailViewController.swift in Sources */,
+				CCB87B2F1C9F0C3500A66420 /* Validator.swift in Sources */,
 				CC9003A31C9D8A0D004BEE48 /* NewNoteViewController.swift in Sources */,
 				CC1E24021C9C3E990080B07F /* Beyond.xcdatamodeld in Sources */,
 				CC1E23FA1C9C3E990080B07F /* AppDelegate.swift in Sources */,
