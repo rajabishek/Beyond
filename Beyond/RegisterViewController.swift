@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var errorMessageTextLabel: UILabel!
     
     @IBOutlet weak var registerButton: SpringButton!
     
@@ -25,7 +25,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        errorMessage.text = ""
+        errorMessageTextLabel.text = ""
     }
     
     func isValidEmail(testStr:String) -> Bool {
@@ -37,7 +37,7 @@ class RegisterViewController: UIViewController {
     }
     
     func presentInvalidRegistrationAlert(message: String) {
-        errorMessage.text = message
+        errorMessageTextLabel.text = message
         registerButton.animation = "shake"
         registerButton.animate()
     }
@@ -60,7 +60,7 @@ class RegisterViewController: UIViewController {
             else if password != confirm {
                 presentInvalidRegistrationAlert("The passwords do not match")
             } else {
-                errorMessage.text = ""
+                errorMessageTextLabel.text = ""
                 manager.signupWithName("Raj Abishek", email: email, password: password, confirm: confirm) { error, token in
                     if error != nil {
                         self.presentInvalidRegistrationAlert(error!)

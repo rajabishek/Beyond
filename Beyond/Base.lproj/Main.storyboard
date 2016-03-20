@@ -411,7 +411,7 @@
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="vsI-PA-WZZ" id="1aa-fx-cru"/>
                         <outlet property="emailAddressTextField" destination="La4-LY-bzn" id="x6w-66-Rsa"/>
-                        <outlet property="errorMessage" destination="gKg-p0-P09" id="IOy-GN-3eg"/>
+                        <outlet property="errorMessageTextLabel" destination="gKg-p0-P09" id="hZe-zG-1Yz"/>
                         <outlet property="passwordTextField" destination="OT7-uM-e3i" id="UwV-WN-pbF"/>
                         <outlet property="registerButton" destination="bHD-bx-hk5" id="VVo-8U-wAJ"/>
                         <segue destination="rVL-ew-Bbg" kind="show" identifier="presentHomeScreen" id="Zp4-ar-VO6"/>
@@ -529,7 +529,7 @@
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
                                                                                         <connections>
-                                                                                            <segue destination="rVL-ew-Bbg" kind="presentation" modalTransitionStyle="crossDissolve" id="727-e6-r7w"/>
+                                                                                            <action selector="loginButtonWasPressed:" destination="yFF-Hl-OWh" eventType="touchUpInside" id="kUO-fT-vtM"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq6-rb-LCi" customClass="SpringButton" customModule="Spring">
@@ -578,7 +578,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="errorMessage" destination="3Fg-rG-GdF" id="NrR-3e-mEe"/>
+                        <outlet property="emailTextField" destination="IsT-BK-pL3" id="g3T-I3-bc8"/>
+                        <outlet property="errorMessageTextLabel" destination="3Fg-rG-GdF" id="HVB-3a-v3Y"/>
+                        <outlet property="loginButton" destination="chm-of-yKO" id="jq7-AA-ac0"/>
+                        <outlet property="passwordTextField" destination="G6c-js-pZP" id="mQq-V3-Mm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvv-bA-U74" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -610,7 +613,4 @@
         <image name="menu" width="25" height="25"/>
         <image name="plus" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="727-e6-r7w"/>
-    </inferredMetricsTieBreakers>
 </document>
