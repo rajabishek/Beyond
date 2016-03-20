@@ -66,6 +66,24 @@
             </objects>
             <point key="canvasLocation" x="2038" y="1050"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="xZC-5i-kP5">
+            <objects>
+                <viewController id="fTj-t6-2re" customClass="AboutViewController" customModule="Beyond" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jb9-lu-vKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ChH-hB-1an"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kf7-Uw-ifF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9u-r6-Cru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="-443"/>
+        </scene>
         <!--Notes Table View Controller-->
         <scene sceneID="hzh-Dt-h3t">
             <objects>
@@ -148,7 +166,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aaP-tn-5xa">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="Lfv-1r-BfR"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Lfv-1r-BfR">
+                            <connections>
+                                <segue destination="fTj-t6-2re" kind="presentation" id="T4Z-YM-KZO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" id="U23-T7-lT9">
                             <connections>
                                 <segue destination="w5d-BH-fZS" kind="presentation" id="C3H-wA-D04"/>
