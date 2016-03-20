@@ -10,9 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var errorMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        errorMessage.text = ""
         // Do any additional setup after loading the view.
     }
 
