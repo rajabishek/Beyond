@@ -21,8 +21,6 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var registerButton: SpringButton!
     
-    @IBOutlet weak var registrationContainer: UIStackView!
-    
     let manager = AuthManager()
     
     override func viewDidLoad() {
