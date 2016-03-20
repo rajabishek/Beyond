@@ -30,7 +30,6 @@ class AuthManager {
                 case .Success:
                     if let value = response.result.value {
                         let json = JSON(value)
-                        print("\(json)")
                         if let success = json["success"].bool {
                             if success {
                                 if let token = json["data"]["token"].string {
