@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NotesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class NotesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var notes = [Note]()
     
@@ -33,19 +33,6 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-    }
-    
-    func filterContentForSearchText(searchText: String) {
-        searchResults = notes.filter({ note in
-        note.title.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch) != nil
-        })
-    }
-    
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text {
-            filterContentForSearchText(searchText)
-            tableView.reloadData()
-        }
     }
     
     func setupSearchController() {
@@ -79,38 +66,6 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        tableView.beginUpdates()
-    }
-    
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        
-        switch type {
-            case .Insert:
-                if let _newIndexPath = newIndexPath {
-                    tableView.insertRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
-                }
-            case .Delete:
-                if let _indexPath = indexPath {
-                    tableView.deleteRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
-                }
-            case .Update:
-                if let _indexPath = indexPath {
-                    tableView.reloadRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
-                }
-            default:
-                tableView.reloadData()
-        }
-        notes = controller.fetchedObjects as! [Note]
-        if searchController.active {
-            searchResults = notes
-            updateSearchResultsForSearchController(searchController)
-        }
-    }
-    
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        tableView.endUpdates()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -145,8 +100,7 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         let note = (searchController.active && searchController.searchBar.text != "") ? searchResults[indexPath.row] : notes[indexPath.row]
         
         // Configure the cell...
-        cell.titleTextLabel.text = note.title
-        cell.contentTextLabel.text = note.content
+        cell.populateCellWithNote(note)
         cell.backgroundColor = UIColor.clearColor()
         
         return cell
@@ -200,4 +154,56 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         return true
     }
     */
+}
+
+extension NotesTableViewController: UISearchResultsUpdating {
+    
+    func filterContentForSearchText(searchText: String) {
+        searchResults = notes.filter({ note in
+            note.title.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch) != nil
+        })
+    }
+        
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContentForSearchText(searchText)
+            tableView.reloadData()
+        }
+    }
+}
+
+extension NotesTableViewController: NSFetchedResultsControllerDelegate {
+        
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        tableView.beginUpdates()
+    }
+        
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+                
+        switch type {
+            case .Insert:
+                if let _newIndexPath = newIndexPath {
+                    tableView.insertRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
+                }
+            case .Delete:
+                if let _indexPath = indexPath {
+                    tableView.deleteRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
+                }
+            case .Update:
+                if let _indexPath = indexPath {
+                tableView.reloadRowsAtIndexPaths([_indexPath], withRowAnimation: .Fade)
+                }
+            default:
+                tableView.reloadData()
+        }
+        notes = controller.fetchedObjects as! [Note]
+        if searchController.active {
+            searchResults = notes
+            updateSearchResultsForSearchController(searchController)
+        }
+    }
+        
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.endUpdates()
+    }
 }

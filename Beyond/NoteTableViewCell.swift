@@ -14,6 +14,11 @@ class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var contentTextLabel: UILabel!
     
+    func populateCellWithNote(note: Note) {
+        titleTextLabel.text = note.title
+        contentTextLabel.text = note.content
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
