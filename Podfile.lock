@@ -3,12 +3,14 @@ PODS:
   - Kingfisher (2.1.0)
   - Spring (1.0.3)
   - SwiftyJSON (2.3.2)
+  - TextFieldEffects (1.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - Kingfisher (~> 2.1)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TextFieldEffects
 
 EXTERNAL SOURCES:
   Spring:
@@ -30,5 +32,6 @@ SPEC CHECKSUMS:
   Kingfisher: 3ac09acad75a25ab22f6d7cef3de10d61dd4792d
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TextFieldEffects: a1a78efeb93b65c611ad287b28a068c9a4a5f5b4
 
 COCOAPODS: 0.39.0
