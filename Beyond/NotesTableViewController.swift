@@ -44,8 +44,7 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         
         searchController.searchBar.placeholder = "Search notes..."
         searchController.searchBar.tintColor = UIColor.whiteColor()
-        searchController.searchBar.barTintColor = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.00)
-    }
+        searchController.searchBar.barTintColor = UIColor(red:0.35, green:0.65, blue:0.86, alpha:1.00)    }
     
     func setupFetchResultsController() {
         

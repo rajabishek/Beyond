@@ -17,17 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UINavigationBar.appearance().barTintColor = UIColor(red:0.19, green:0.22, blue:0.30, alpha:1.00)
-        UINavigationBar.appearance().tintColor = UIColor(red:0.03, green:0.78, blue:0.59, alpha:1.00)
-        
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.24, green:0.24, blue:0.27, alpha:1.00)
+        UINavigationBar.appearance().tintColor = UIColor(red:0.35, green:0.65, blue:0.86, alpha:1.00)
         if let barFont = UIFont(name: "Avenir-Light", size: 19.0) {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:barFont]
         }
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
-        if AuthManager.getToken() == nil {
-            self.window?.rootViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("LoginScreen")
-
-        }
+//        if AuthManager.getToken() == nil {
+//            self.window?.rootViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("LoginScreen")
+//
+//        }
         return true
     }
 
