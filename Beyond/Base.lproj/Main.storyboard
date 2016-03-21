@@ -273,19 +273,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="gZS-kZ-tlB">
-                                <rect key="frame" x="175" y="50" width="250" height="421"/>
+                                <rect key="frame" x="175" y="50" width="250" height="423"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-zr-Hq7">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="63"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beyond" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-1v-lKs">
-                                                <rect key="frame" x="76" y="0.0" width="99" height="39"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                                <rect key="frame" x="72" y="0.0" width="106" height="41"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <color key="textColor" red="0.031372549020000001" green="0.7843137255" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The workspace for your life's work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so4-6h-CUG">
-                                                <rect key="frame" x="17" y="44" width="217" height="20"/>
+                                                <rect key="frame" x="16.5" y="46" width="217" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -293,7 +293,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7Pn-Vt-YhW">
-                                        <rect key="frame" x="0.0" y="103" width="250" height="318"/>
+                                        <rect key="frame" x="0.0" y="105.5" width="250" height="317.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxE-ni-hpI" customClass="SpringLabel" customModule="Spring">
                                                 <rect key="frame" x="38" y="0.0" width="174" height="29"/>
@@ -309,24 +309,24 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bpv-bs-sM2">
-                                                <rect key="frame" x="0.0" y="59" width="250" height="259"/>
+                                                <rect key="frame" x="0.0" y="59" width="250" height="258.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKg-p0-P09">
-                                                        <rect key="frame" x="79" y="0.0" width="93" height="20"/>
+                                                        <rect key="frame" x="79" y="0.0" width="92.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                         <color key="textColor" red="0.94117647058823528" green="0.31764705882352939" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-Hw-iT9">
-                                                        <rect key="frame" x="0.0" y="30" width="250" height="229"/>
+                                                        <rect key="frame" x="0.0" y="29.5" width="250" height="229"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-kj-B1j">
                                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="125"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-c9-qsb">
                                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -336,8 +336,8 @@
                                                                     </textField>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="La4-LY-bzn">
                                                                         <rect key="frame" x="0.0" y="35" width="250" height="20"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -347,23 +347,23 @@
                                                                     </textField>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OT7-uM-e3i">
                                                                         <rect key="frame" x="0.0" y="70" width="250" height="20"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <color key="value" red="0.41176470588235292" green="0.43529411764705883" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsI-PA-WZZ">
                                                                         <rect key="frame" x="0.0" y="105" width="250" height="20"/>
-                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <color key="value" red="0.41176470588235292" green="0.43529411764705883" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
@@ -462,19 +462,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="0uv-NY-nKw">
-                                <rect key="frame" x="175" y="50" width="250" height="350.5"/>
+                                <rect key="frame" x="175" y="50" width="250" height="353"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hAl-S4-ywq">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="63"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beyond" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-o5-qxM">
-                                                <rect key="frame" x="75.5" y="0.0" width="99" height="38.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                                <rect key="frame" x="72" y="0.0" width="106" height="41"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <color key="textColor" red="0.031372549020000001" green="0.7843137255" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The workspace for your life's work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvI-Zo-wOl">
-                                                <rect key="frame" x="16.5" y="43.5" width="217" height="19.5"/>
+                                                <rect key="frame" x="16.5" y="46" width="217" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -482,7 +482,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9KR-eb-rL8">
-                                        <rect key="frame" x="0.0" y="103" width="250" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="105.5" width="250" height="247.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-QR-JRg" customClass="SpringLabel" customModule="Spring">
                                                 <rect key="frame" x="92.5" y="0.0" width="65.5" height="29"/>
