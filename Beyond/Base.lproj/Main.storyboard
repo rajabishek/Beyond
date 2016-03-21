@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Ry-hr-eTr" firstAttribute="leading" secondItem="efx-6v-Rbc" secondAttribute="leadingMargin" id="ULR-s4-K4u"/>
                             <constraint firstItem="BiP-pR-C0M" firstAttribute="top" secondItem="WhL-mf-DUR" secondAttribute="bottom" constant="20" id="aqo-ER-HHn"/>
@@ -213,7 +213,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m82-d7-JGY" firstAttribute="top" secondItem="JOi-4V-miz" secondAttribute="bottom" constant="8" id="41q-9h-7OU"/>
                             <constraint firstItem="m82-d7-JGY" firstAttribute="trailing" secondItem="BF9-A3-cQw" secondAttribute="trailingMargin" id="7tC-F3-af2"/>

@@ -20,6 +20,8 @@ class NewNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Start Writing"
+        let padding = CGFloat(15)
+        contentTextView.textContainerInset = UIEdgeInsetsMake(padding, padding, padding, padding)
         contentTextView.text = contentViewPlaceHolderText
         contentTextView.textColor = UIColor.lightGrayColor()
         contentTextView.delegate = self

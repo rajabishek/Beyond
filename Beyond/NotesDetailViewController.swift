@@ -19,7 +19,8 @@ class NotesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Keep Writing"
-    
+        let padding = CGFloat(15)
+        contentTextView.textContainerInset = UIEdgeInsetsMake(padding, padding, padding, padding)
         titleTextField.text = note.title
         contentTextView.text = note.content
     }
