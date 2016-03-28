@@ -102,7 +102,6 @@
 				CC4BEC9D1C9D627D007D045A /* View */,
 				CC4BEC9E1C9D6282007D045A /* Controller */,
 				CC4BEC9C1C9D6276007D045A /* Model */,
-				CCB87B301C9F0C5600A66420 /* Validator */,
 			);
 			path = Beyond;
 			sourceTree = "<group>";
@@ -178,13 +177,6 @@
 				CC9003A01C9D8679004BEE48 /* NotesDetailViewController.swift */,
 			);
 			name = Note;
-			sourceTree = "<group>";
-		};
-		CCB87B301C9F0C5600A66420 /* Validator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Validator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
