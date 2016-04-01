@@ -30,6 +30,10 @@ class RegisterViewController: UIViewController {
         errorMessageTextLabel.text = ""
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true);
+    }
+    
     func isValidEmail(testStr:String) -> Bool {
         
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
