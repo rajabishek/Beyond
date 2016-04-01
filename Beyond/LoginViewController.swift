@@ -45,6 +45,10 @@ class LoginViewController: UIViewController {
         
         return emailTest.evaluateWithObject(testStr)
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true);
+    }
 
     @IBAction func loginButtonWasPressed(sender: AnyObject) {
         
