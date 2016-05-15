@@ -1,8 +1,8 @@
 #Beyond
 Beyond is a simple note taking app for the iOS platform. It is written using the Swift Language. The application uses COCOAPODS to manage its dependencies.
 
-![Image1](/images/image1.jpg)
-![Image2](/images/image2.jpg)  
+![Writing Notes](Resources/image1.png)
+![Removing Notes](Resources/image2.png)  
 
 ##Requirements
 - iOS 8.0+ / Mac OS X 10.9+
